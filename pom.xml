@@ -9,7 +9,19 @@
 
   <name>Spring-AOP</name>
   <url>http://maven.apache.org</url>
-
+    <!-- 设置jdk版本 -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <testng.version>6.9.10</testng.version>
