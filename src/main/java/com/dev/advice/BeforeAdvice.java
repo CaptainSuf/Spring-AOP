@@ -1,8 +1,6 @@
 package com.dev.advice;
 
 import org.springframework.aop.MethodBeforeAdvice;
-import org.springframework.cglib.proxy.MethodInterceptor;
-import org.springframework.cglib.proxy.MethodProxy;
 
 import java.lang.reflect.Method;
 
