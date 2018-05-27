@@ -17,10 +17,10 @@ public class IntrductionInterceptorAdvice extends DelegatingIntroductionIntercep
 		if(null!=isopen.get() && isopen.get()){
 			long start = System.currentTimeMillis();
 			System.out.println("开始进行性能监控:");
-			obj = invocation.proceed();
+			obj = super.invoke(invocation);
 			System.out.println("性能监控结束耗时:"+(System.currentTimeMillis()-start)+"毫秒");
 		}else {
-			obj = invocation.proceed();
+			obj = super.invoke(invocation);
 		}
 		 
 		return obj;

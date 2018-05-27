@@ -1,6 +1,8 @@
 package com.dev.advice;
 
 import org.springframework.aop.framework.ProxyFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.testng.annotations.Test;
 
 public class AdviceTester {
@@ -82,6 +84,20 @@ public class AdviceTester {
         intrduction.open(true);
         
         target.add();
+    }
+    
+    @Test
+    public void proxyBean() throws Exception{
+    	
+    	ApplicationContext application = new ClassPathXmlApplicationContext("com/dev/advice/conf/spring.xml");
+    	Target target = application.getBean("intrductionAdvice", Target.class);
+    	target.add();
+    	
+    	Intrduction intrduction = (Intrduction)target;
+        intrduction.open(true);
+        
+        target.add();
+    	
     }
     
     @Test
