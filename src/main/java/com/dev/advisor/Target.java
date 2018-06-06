@@ -1,4 +1,4 @@
-package com.dev.advice;
+package com.dev.advisor;
 
 
 
@@ -10,8 +10,9 @@ public class Target {
 
     public void del()throws Exception{
         System.out.println(this.getClass().getName()+"调用del方法");
-        if(1==1){
-    		throw new RuntimeException();
-    	}
+    }
+    
+    public static void find()throws Exception{
+        System.out.println("调用静态方法");
     }
 }
