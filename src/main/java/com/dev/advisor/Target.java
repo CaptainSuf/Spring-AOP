@@ -12,7 +12,7 @@ public class Target {
         System.out.println(this.getClass().getName()+"调用del方法");
     }
     
-    public static void find()throws Exception{
+    public  void find()throws Exception{
         System.out.println("调用静态方法");
     }
 }
